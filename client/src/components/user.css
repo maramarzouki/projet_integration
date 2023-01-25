@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
+
+*{
+    font-family: 'Fresca', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.container{
+    position: fixed;
+    width: 100%;
+    overflow:scroll;
+    background: rgb(199,174,238);
+    background: linear-gradient(90deg, #b494e8 17%, rgb(128, 167, 211) 100%);
+
+}
+
+.sidebar-menu{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.54);
+    border-left: 10px solid  rgba(216, 213, 213, 0.54);
+    transition: 0.5s;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.sidebar-menu ul{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+}
+
+.sidebar-menu ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.selected 
+
+{
+    background-color:#AF95E6;
+    color: aliceblue;
+}
+
+
+.selected  span, .selected i{
+    color: aliceblue;
+}
+.sidebar-menu ul li a{
+position: relative;
+display: block;
+width: 100%;
+display: flex;
+text-decoration: none;
+color: #000;
+
+}
+
+.sidebar-menu ul li a i{
+position: relative;
+display: block;
+min-width: 60px;
+height: 60px;
+line-height: 60px;
+text-align: center;
+font-size: 1.3rem;
+
+}
+
+.sidebar-menu ul li a span{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+
+}
+
+/******making the curve ****/
+.selected a::before
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow:  35px 35px 0 10px #AF95E6;
+    pointer-events: none;
+}
+
+.selected a::after
+{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow:  35px -35px 0 10px #AF95E6;
+    pointer-events: none;
+}
+
+
+/***********************************/
+/*** main ***/
+.main{
+    position: absolute;
+    width:calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: transparent;
+    transition: 0.5s;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle{
+    position: relative;
+    top: 10%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.activestate{
+    
+    width: 80px;
+}
+
+.activestate .heading{
+    visibility: hidden;
+}
+
+.activ{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+/**************************/
+/***** cards *****/
+
+.cardbox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.cardbox .cardd{
+    position: relative;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08) ;
+}
+
+.cardbox .cardd .numbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: rgb(12, 17, 31);
+}
+
+.cardbox .cardd .cardname{
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardbox .cardd .icon i{
+    font-size: 3.5rem;
+    color: rgb(32, 216, 216);
+
+}
+/**********************************/
+.b1{
+    margin-top: 2%;
+    margin-left: 41%;   
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: rgb(32, 216, 216);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight:500;
+   
+}
+
+
+.b2{
+
+display: inline-block;
+padding: .5rem 1.5rem;
+border-radius: .5rem;
+color: #fff;
+background: #fa7e8d;
+font-size: 1.2rem;
+cursor: pointer;
+font-weight:500;
+
+}
+
+.b2:hover{
+    background-color: #f15a6c;
+}
+
+/*******/
+/** project box**/
+.containerprojects{
+    max-width: 1440px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    gap: 40px;
+
+}
+
+.projectcard{
+position: relative;
+background-color: #fff;
+padding: 50px 30px;
+text-align: center;
+box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .288);
+transition: all 0.5s ease;
+
+}
+
+.projectcard::after{
+    ---right:100%;
+    content: '';
+    position: absolute;
+    inset: calc(100% - 3px) var(---right) 0 0;
+    background: rgb(32, 216, 216);
+    transition: all 0.5s ease;
+}
+
+.projectcard:hover::after{
+---right:0%;
+}
+.phead{
+    position: relative;
+    height:50px;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.phead i{
+    font-size: 2rem;
+
+}
+
+.phead .rounded{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #AF95E6;
+    box-shadow: inset 0 0 20px hsla(214, 80% , 40%, 0.2), 0 0 20px hsla(214, 80% , 40%, 0.2);
+    border-radius: 10em;
+    transform:rotate(-45deg) ;
+    animation: rotate-360 2s linear infinite;
+    animation-play-state: paused;
+
+}   
+@keyframes rotate-360 {
+    from{    transform:rotate(-45deg) ; }
+    to{    transform:rotate(315deg) ;    }
+    
+}
+
+.projectcard:hover .rounded{
+    animation-play-state: running;
+}
+.phead .circle{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: rgb(32, 216, 216);
+    border-radius: 100%;
+    top: -7px;
+    transform: translateX(-50%);
+    box-shadow: 0 100px rgb(32, 216, 216);
+
+
+}
+
+.pbody{
+    margin-top: 30px;
+}
+.pbody h3{
+   font-size: 1.3rem; 
+   color: hsl(0, 0%, 4%);
+   margin-bottom: 10px;
+}
+
+.pbody p{
+    color: hsl(229, 11%, 36%);
+    margin-bottom: 10px;
+
+}
+.pbody .actions{
+    margin-right: 10%;
+}
+.pbody .actions i{
+    margin-left: 18px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.pbody .actions i:first-child{
+    color: rgb(83, 22, 22);
+}
+
+.pbody .actions .pen i{
+color:#2ec4b6;
+}
+
+.pbody .actions i:nth-child(3){
+    color:#d90429;
+    }
+
+    .pbody a {
+        text-decoration: none;
+        margin-bottom: 5%;
+        font-size: 1.2rem;
+
+    }
+
+    /*********/
+    /** pop up **/
+    .mbody{
+        padding-top: 5%;
+
+    }
+   .mbody .formcontainer{
+    background-color: #fff;
+        max-width: 25rem;
+        max-height: fit-content;
+        margin: 0 auto;
+        
+        padding: 2rem;
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .1);
+        border: .2rem solid #444;
+        border-radius: .5rem;
+
+    }
+    .mbody   .formcontainer form .box{
+        width: 100%;
+        margin: 1rem 0;
+        font-size: 1.1rem;
+        padding-left: 2%;
+      background-color: transparent;
+        color: #444;
+        border: .2rem solid #444;
+        border-radius: .9rem;
+      }
+
+    
+.modalBg{
+    background: linear-gradient(90deg, rgb(180, 148, 232) 17%, rgb(128, 167, 211) 100%);
+    width: 100%;
+    height: 100vh;
+
+}
+
+
+
+.x{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 80%;
+    background: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.pen i{
+    color: #2ec4b6;
+}
+/********************************************************************************/
+/*************** STAUTUS LINE ************************/
+
+
+.mainn{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        margin-left: 1%;
+}
+
+.sec{
+    width: 70rem;
+    margin-bottom: 2rem;
+    padding-top: 1rem;
+
+}
+
+.status{
+width: 100%;
+background-color: #2ec4b6;
+display: flex;
+align-items: center;
+}
+
+
+.status h2 {
+    font-weight: 800;
+   margin-left: 10%;
+    font-size: 22px;
+   
+}
+
+.task-container{
+    display: flex;
+    align-items: center;
+}
+
+.task{
+
+padding: 1rem;
+    margin-bottom: 0.5rem;
+    width: 35%;
+    margin-left: 1%;
+    margin-right: 2%;
+    background-color: white;
+    align-items: flex-end;
+    border: 1px solid white ;
+    border-radius: 0.25rem;
+}
+.task p{
+    margin-top: 3%;
+}
+.task .priority{
+    display: inline-block;
+    padding: .3rem 1rem;
+    border-radius: .7rem;
+    color: #fff;
+    background: #f15a6c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight:200;
+  
+}
+
+.task .level{
+    display: inline-block;
+    padding: .2rem 1rem;
+    border-radius: .7rem;
+    color: #fff;
+    background: #b25af1;
+    font-size: 1.1rem;
+    cursor: pointer;
+  
+}
+.actions i{
+    margin-left: 18px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.butadd{
+    background-color: aqua;
+    color: white;
+    font-weight: 500;
+    font-size: 3rem;
+    padding: 0 0 0rem;
+    border-radius: 50%;
+    border: 1px solid aqua;
+    text-transform: uppercase;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+
+}
+
+.butadd:hover{
+    background:rgb(32, 216, 216)
+
+}
+
+/*********************************************************/
+/*** usertodo **/
+.UserTodo  h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+.UserTodo .container .mainn{
+   margin-left: 30%;
+}
+/*********************************************************/
+/*** user **/
+.user  .mainn h1{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+
+}
+
+.user .container .mainn{
+   margin-left: 30%;
+}
+
+/*********************************************************/
+/*** pomodoro **/
+.pomodoro h1{
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+}
+.pomodoro p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.pomodoro .container .mainn{
+    margin-left: 35%;
+    margin-top: 5%;
+ }
+ 
+
+
+
+
+/**TASK.JS **/
+.taskk{
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    border: 1px solid white ;
+    border-radius: 0.25rem;
+}
+
+.task.collapsedTask{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.5rem;
+}
+
+.task form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 0 0.2rem;
+}
+
+.titleinput{
+    border: 2px solid transparent;
+    font-size: 25px;
+    border-radius: 0.5rem;
+    text-align: center;
+    resize: none;
+    display: flex;
+}
+
+.titleinput:hover{
+    cursor: pointer;
+    border:2px solid black;
+}
+.titleinput:focus{
+    border-color: #AF95E6;
+
+}
+
+.descinput{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      border-radius: 0.5rem;
+
+      font-size: 1.1rem;
+}
+
+.descinput:hover{
+    border:2px solid black;
+
+}
+
+.urgencyLabels{
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+label{
+    color: black;
+    padding: 0.05rem 0.5rem;
+    margin: 0 0.25rem;
+    margin-left: 7%;
+    text-transform: uppercase;
+    border-radius: 0.25rem;
+}
+
+.low{
+    background: #2ec4b6;
+
+}
+.low:hover{
+    cursor: pointer;
+    background-color: aqua;
+    border-color: aqua;
+}
+
+
+.medium{
+    background: #ee8064;
+
+}
+.medium:hover{
+    cursor: pointer;
+    background-color: #f4a261;
+    border-color: #f4a261;
+}
+
+
+.high{
+    background: #f15a6c;
+
+}
+.high:hover{
+    cursor: pointer;
+    background-color: #fa7e8d;
+    border-color: #fa7e8d;
+}
+
+.selectedLevel {
+    font-weight: 700;
+  }
+
+  .btmove{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .2rem 1rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: #654dd4;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight:200;
+  
+  }
+  
+   .btmove:hover{
+  background-color: #8070c8;
+  
+  }
+
+  form.collapsed{
+    flex-direction: row;
+    align-content: center;
+  }
+  .collapsed.titleinput{
+   margin: 0;
+  }
+
+  .collapsed.urgencyLabels{
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  .collapsed.descinput{
+    display: none;
+  }
+
+ 
+
+  .collapsed.btn4{
+    padding: 0.025rem 0.5rem;
+
+
+  }

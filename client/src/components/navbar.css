@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fresca&display=swap');
+
+.NavItems{
+    background-color:#826AED ;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+   
+  
+    
+  }
+  
+  .logo{
+    width: 100%;
+    margin-top: 0%;
+  }
+  @media screen and (max-width: 700px) {
+    .logo {
+      width: 190%;
+    }
+  }
+  
+  
+  .leftcont{
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    padding-left: 0%;
+  
+  }
+  .rightcont{
+    flex: 80%;
+    display: flex;
+    align-items: center;
+    padding-left: 20%;
+    
+  
+  }
+  
+  .navInnerCont{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    
+  }
+  
+  
+  .rightcont a{
+    color: white;
+    display: inline-block;
+    position: relative;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    list-style: none;
+    letter-spacing: 0.5px;
+    font-family: 'Fresca', sans-serif;
+    padding: 0 20px;
+  }
+  
+  .rightcont a:hover{
+    color: aqua;
+  }
+  .rightcont a::after{
+    content: "";
+    position: absolute;
+    background-color: aqua;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+  }
+  .rightcont a:hover::after{
+    width: 99%;
+  }
+  @media screen and (max-width: 700px) {
+    .rightcont a {
+      display: none;
+    }
+  }
+  .openLinkBut{
+    width: 70px;
+    height: 50px;
+    background: none;
+    border: none;
+    color: aqua;
+    font-size: 39px;
+    cursor: pointer;
+    
+   
+  }
+  
+  @media screen and (min-width: 700px) {
+    .openLinkBut {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .openLinkBut {
+      margin-left: 70%;
+    }
+  }
+  
+  .navExtended{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: #8874dd;
+    max-height: 100vh;
+  
+  
+  }
+  .navExtended a{
+    padding: 5%;
+    font-size: large;
+    color:  #ffff;
+  
+  }
+  
+  .navExtended a:hover{
+    background-color: aqua;
+  }
+  
+  @media screen and (min-width: 700px) {
+    .navExtended {
+      display: none;
+    }
+  }
+  
+  .logBut {
+    display: inline-block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    padding: 10px 40px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #ffff;
+    letter-spacing: 0.5px;
+    font-family: 'Fresca', sans-serif;
+    text-transform: uppercase;
+    border: 2px solid #ffff;
+  
+  }
+  .logBut:hover {
+  border: 2px solid aqua;
+  
+  }
+  
+  
+  @media screen and (max-width: 700px) {
+    .logBut {
+      padding: 15px 10px;
+      font-size: 1.3rem;
+      margin-top: 4%;
+      margin-bottom: 3%;
+      margin-right: 3%;
+    }
+  }
+  
+  .logBut a{
+    color: azure;
+  }
+  
+  .logBut a:hover{
+    color: aqua;
+  }

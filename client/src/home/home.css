@@ -1,0 +1,113 @@
+/*! HOME CSS */
+
+    /* ? HEADER  */
+/******************************/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5rem;
+  background-color: #826AED;
+  position: relative;
+  
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    width: 15rem;
+    height: auto;
+    cursor: pointer;
+
+}
+.head img{
+    margin-right: 0.5rem;
+}
+
+nav{
+    width: 37rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+    margin-right: 15%;
+ 
+}
+   
+@media only screen and (max-width: 900px){
+    nav{
+        display: none;
+    }
+    
+}
+
+nav a{
+    font-weight: 600;
+    color: white;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    text-decoration: none;
+
+}
+
+nav a::after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 3px;
+    background: transparent;
+    transition: width 0.5s;
+
+}
+
+nav a:hover::after{
+    width: 100%;
+    background-color: #00ffff;
+
+}
+
+nav a:last-child::after{
+    width: 100%;
+    background-color: #826AED;
+
+}
+
+.Intro{
+    background-color: white;
+ 
+
+}
+
+@media only screen and (max-width: 900px){
+    .Intro .picintro{
+        display: none;
+    }
+    
+}
+/******************************************************************/
+/* ? Discover section water drops */
+.waterdrops{
+    position:relative;
+    margin-top: 80%;
+}
+.waterdrops .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:  wrap;
+    padding:  50px 20px;
+    gap: 40px 60px;
+
+}
+
+.waterdrops .container .drops{
+
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: aliceblue;
+
+
+}
